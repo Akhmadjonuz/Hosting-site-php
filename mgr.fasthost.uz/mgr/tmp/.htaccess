@@ -1,0 +1,4 @@
+
+deny from all
+php flag_engine off
+CharsetRecodeMultipartForms Off

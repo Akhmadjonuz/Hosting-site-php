@@ -1,0 +1,52 @@
+
+RewriteEngine on
+RewriteRule ^webhook/?$ webhook.php [L,QSA]
+RewriteRule ^user/menu/?$ zapanel/acp.php [L,QSA]
+RewriteRule ^pma/?$ zapanel/pma [L,QSA]
+RewriteRule ^webfm/?$ webfmaa [L,QSA]
+
+RewriteRule ^authcp/?$ zapanel/authcp.php [L,QSA]
+RewriteRule ^infor/?$ zapanel/infor.php [L,QSA]
+RewriteRule ^db/?$ zapanel/db.php [L,QSA]
+RewriteRule ^db/add/?$ zapanel/dbadd.php [L,QSA]
+RewriteRule ^db/delete/([^/]*)$ /zapanel/dbdelete.php?elid=$1 [L,QSA]
+RewriteRule ^db/down/([^/]*)$ /zapanel/dbdown.php?elid=$1 [L,QSA]
+
+RewriteRule ^ftp/?$ zapanel/ftp.php [L,QSA]
+RewriteRule ^ftp/add/?$ zapanel/ftpadd.php [L,QSA]
+RewriteRule ^ftp/enable/([^/]*)$ /zapanel/ftpenable.php?elid=$1 [L,QSA]
+RewriteRule ^ftp/disable/([^/]*)$ /zapanel/ftpdisable.php?elid=$1 [L,QSA]
+RewriteRule ^ftp/delete/([^/]*)$ /zapanel/ftpdelete.php?elid=$1 [L,QSA]
+
+RewriteRule ^cron/?$ zapanel/cron.php [L,QSA]
+RewriteRule ^cron/add/?$ zapanel/cronadd.php [L,QSA]
+RewriteRule ^cron/enable/([^/]*)$ /zapanel/cronenable.php?elid=$1 [L,QSA]
+RewriteRule ^cron/disable/([^/]*)$ /zapanel/crondisable.php?elid=$1 [L,QSA]
+RewriteRule ^cron/edit/([^/]*)$ /zapanel/cronedit.php?elid=$1 [L,QSA]
+RewriteRule ^cron/delete/([^/]*)$ /zapanel/crondelete.php?elid=$1 [L,QSA]
+
+RewriteRule ^domen/?$ zapanel/domen.php [L,QSA]
+RewriteRule ^domen/add/?$ zapanel/domenadd.php [L,QSA]
+RewriteRule ^domen/enable/([^/]*)$ /zapanel/domenenable.php?elid=$1 [L,QSA]
+RewriteRule ^domen/disable/([^/]*)$ /zapanel/domendisable.php?elid=$1 [L,QSA]
+RewriteRule ^domen/delete/([^/]*)$ /zapanel/domendelete.php?elid=$1 [L,QSA]
+RewriteRule ^domen/phpv/([^/]*)$ /zapanel/domenphp.php?elid=$1 [L,QSA]
+RewriteRule ^domen/set/([^/]*)$ /zapanel/domenset.php?elid=$1 [L,QSA]
+
+RewriteRule ^ssl/?$ zapanel/ssl.php [L,QSA]
+RewriteRule ^ssl/add/?$ zapanel/ssladd.php [L,QSA]
+RewriteRule ^ssl/delete/([^/]*)$ /zapanel/ssldelete.php?elid=$1 [L,QSA]
+
+RewriteRule ^down/base/([^/]*)$ /zapanel/down.php?elid=$1 [L,QSA]
+
+RewriteRule ^cp/?$ page/cp/index.php [L,QSA]
+RewriteRule ^cp/exit/?$ page/cp/index.php?act=exit [L,QSA]
+RewriteRule ^cp/index/?$ page/cp/mpro.php [L,QSA]
+RewriteRule ^cp/ftp/?$ page/cp/ftp.php [L,QSA]
+RewriteRule ^cp/ftp/delete/?$ page/cp/ftp.php?act=delete [L,QSA]
+RewriteRule ^cp/ftp/creat/?$ page/cp/ftp.php?act=creat [L,QSA]
+
+
+
+ErrorDocument 404 /?404
+ErrorDocument 403 /?404
